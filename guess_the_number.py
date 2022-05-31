@@ -14,17 +14,27 @@ def run():
             chancesvar.set(chances)
             c.update()
             if(int(guesss )== int(randomn)):
-                tkinter.messagebox.askyesno("You won","You have won\nEvery next level the range will increased by 10X \n\nDo you want to continue for the next level")
-                guess.set("")
-                chances=8
-                chancesvar.set(chances)
-                c.update()
-                smallerorbigger.set("")
-                # randomn=random.randint(0,int(randomn*10))
-                r=r*10
-                randomn=random.randint(0,r)
-                asds.set("Guess the number - ")
-
+                msg=tkinter.messagebox.askyesno("You won","You have won\nEvery next level the range will increased by 10X \n\nDo you want to continue for the next level")
+                if(msg == "yes"):
+                    guess.set("")
+                    chances=8
+                    chancesvar.set(chances)
+                    c.update()
+                    smallerorbigger.set("")
+                    # randomn=random.randint(0,int(randomn*10))
+                    r=r*10
+                    randomn=random.randint(0,r)
+                    asds.set("Guess the number - ")
+                if(msg == "no"):
+                    guess.set("")
+                    chances=8
+                    chancesvar.set(chances)
+                    c.update()
+                    smallerorbigger.set("")
+                    # randomn=random.randint(0,int(randomn*10))
+                    r=r
+                    randomn=random.randint(0,r)
+                    asds.set("Guess the number - ")
             
 
 
