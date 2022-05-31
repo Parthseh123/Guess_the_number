@@ -15,7 +15,7 @@ def run():
             c.update()
             if(int(guesss )== int(randomn)):
                 msg=tkinter.messagebox.askyesno("You won","You have won\nEvery next level the range will increased by 10X \n\nDo you want to continue for the next level")
-                if(msg == "yes"):
+                if(msg == True):
                     guess.set("")
                     chances=8
                     chancesvar.set(chances)
@@ -25,7 +25,7 @@ def run():
                     r=r*10
                     randomn=random.randint(0,r)
                     asds.set("Guess the number - ")
-                if(msg == "no"):
+                if(msg == False):
                     guess.set("")
                     chances=8
                     chancesvar.set(chances)
